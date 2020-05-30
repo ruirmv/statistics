@@ -1,4 +1,4 @@
 # statistics
 Some statistical methods.
 
-..* Markov Simulation
+⋅⋅* Markov Simulation
