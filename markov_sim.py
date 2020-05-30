@@ -5,7 +5,7 @@ import seaborn as sns
 
 sns.set()
 
-def markov_simulation(N, distribution, test):
+def markov_mc_simulation(N, distribution, test):
     """
     Computes the result of a Markov simulation with N samples from a given 
     distribution. 
@@ -21,14 +21,14 @@ def markov_simulation(N, distribution, test):
         
     return positives/N
 
-def pi_markov(N):
+def pi_markov_mc(N):
     """
     Computes an approximate value for pi using a Markov simulation with N samples
     """
     return 4 * markov_simulation(N, lambda: (rd.random_sample(), rd.random_sample()), 
                                  lambda x, y : x**2 + y**2 < 1)
     
-def hist_pi_markov(N_sim, N, n_bins=50):
+def hist_pi_markov_mc(N_sim, N, n_bins=50):
     """
     Displays an histogram of the result of N_sim Markov simulations for 
     computing pi, each of which with N samples drawn. Returns the mean value 
