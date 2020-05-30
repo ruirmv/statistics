@@ -1,4 +1,4 @@
 # Statistics
 Some statistical methods.
 
-- Markov Simulation
+- Monte Carlo Simulation
