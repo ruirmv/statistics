@@ -39,4 +39,4 @@ def hist_pi_markov_mc(N_sim, N, n_bins=50):
     return np.mean(aux), np.var(aux)
 
 if __name__ == "__main__":
-    hist_pi_markov(1000, 100, 50)
+    hist_pi_markov_mc(1000, 100, 50)
