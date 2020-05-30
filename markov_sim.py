@@ -25,7 +25,7 @@ def pi_markov_mc(N):
     """
     Computes an approximate value for pi using a Markov simulation with N samples
     """
-    return 4 * markov_simulation(N, lambda: (rd.random_sample(), rd.random_sample()), 
+    return 4 * markov_mc_simulation(N, lambda: (rd.random_sample(), rd.random_sample()), 
                                  lambda x, y : x**2 + y**2 < 1)
     
 def hist_pi_markov_mc(N_sim, N, n_bins=50):
@@ -34,7 +34,7 @@ def hist_pi_markov_mc(N_sim, N, n_bins=50):
     computing pi, each of which with N samples drawn. Returns the mean value 
     and variance obtained
     """
-    aux = [pi_markov(N) for x in range(N_sim)]
+    aux = [pi_markov_mc(N) for x in range(N_sim)]
     plt.hist(aux, n_bins)
     return np.mean(aux), np.var(aux)
 
